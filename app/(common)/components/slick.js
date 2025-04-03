@@ -12,8 +12,7 @@ const testimonials = [
     name: "Justin Modrak",
     role: "Technology Coordinator",
     company: "East Troy Community School District",
-    image:
-      "/justin-modrak.webp",
+    image: "/justin-modrak.webp",
     quote: "Hexnode is of great value. Works great with Android and iOS!",
   },
   {
@@ -21,7 +20,8 @@ const testimonials = [
     role: "IT Manager",
     company: "TechCorp Solutions",
     image: "/chris-robinson.webp",
-    quote: "Most complete MDM solution I found, and I tested many of them, including major names",
+    quote:
+      "Most complete MDM solution I found, and I tested many of them, including major names",
   },
   {
     name: "Chris Robinson",
@@ -37,7 +37,7 @@ export default function SwiperSlider() {
   const nextRef = useRef(null);
 
   return (
-    <div className="relative w-full flex items-center justify-center">
+    <div className="relative w-full flex items-center justify-center p-5">
       {/* Navigation Arrows */}
       {/* <div
         ref={prevRef}
