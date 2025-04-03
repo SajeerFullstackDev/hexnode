@@ -1,8 +1,8 @@
 import Image from "next/image";
-import Header from "./(commom)/components/header";
-import Footer from "./(commom)/components/footer";
-import Tabs from "./(commom)/components/tabs";
-import SwiperSlider from "./(commom)/components/slick";
+import Header from "./(common)/components/header";
+import Footer from "./(common)/components/footer";
+import Tabs from "./(common)/components/tabs";
+// import SwiperSlider from "./(common)/components/slick";
 // import Slider from "react-slick";
 
 export default function Home() {
