@@ -56,16 +56,16 @@ const Tabs = () => {
   };
 
   return (
-    <div className="bg-gray-100 p-12">
-      <h2 className="text-center text-4xl font-bold text-gray-900 mb-8 mt-5">
+    <div className="bg-gray-100 p-6 sm:p-12">
+      <h2 className="text-center text-2xl sm:text-4xl font-bold text-gray-900 mb-6 sm:mb-8 mt-3 sm:mt-5">
         Specific kiosk modes for unique use cases
       </h2>
 
-      <div className="flex justify-center  border-gray-400">
+      <div className="flex overflow-x-auto no-scrollbar justify-start sm:justify-center space-x-4 sm:space-x-0  pb-2 sm:pb-0">
         {tabs.map((tab) => (
           <button
             key={tab}
-            className={`px-8 py-4 text-xl font-bold focus:outline-none transition-all duration-300 ${
+            className={`px-6 sm:px-8 py-2 sm:py-4 text-sm sm:text-xl font-bold focus:outline-none transition-all duration-300 whitespace-nowrap ${
               activeTab === tab
                 ? "bg-black text-white rounded-t-lg shadow-lg"
                 : "text-gray-600 hover:text-black"
@@ -83,27 +83,27 @@ const Tabs = () => {
         animate={{ opacity: 1, x: 0 }}
         exit={{ opacity: 0, x: 20 }}
         transition={{ duration: 0.3 }}
-        className="bg-white p-8 shadow-2xl rounded-b-lg mt-4 flex flex-col lg:flex-row items-center"
+        className="bg-white p-6 sm:p-8 shadow-2xl rounded-b-lg mt-2 sm:mt-4 flex flex-col sm:flex-row items-center"
       >
-        <div className="lg:w-1/2 space-y-6">
-          <h3 className="text-3xl font-extrabold text-gray-900">
+        <div className="sm:w-1/2 space-y-4 sm:space-y-6">
+          <h3 className="text-2xl sm:text-3xl font-extrabold text-gray-900">
             Powerful {activeTab} solutions for enhanced control
           </h3>
-          <ul className="space-y-3 text-lg text-gray-700">
+          <ul className="space-y-2 sm:space-y-3 text-sm sm:text-lg text-gray-700">
             {tabContent[activeTab]?.map((point, index) => (
               <li key={index} className="flex items-center">
-                <span className="text-green-500 text-xl mr-2">✔️</span>
+                <span className="text-green-500 text-lg sm:text-xl mr-2">✔️</span>
                 {point}
               </li>
             ))}
           </ul>
         </div>
 
-        <div className="lg:w-1/2 flex justify-center mt-6 lg:mt-0">
+        <div className="sm:w-1/2 flex justify-center mt-4 sm:mt-0">
           <img
             src={tabImages[activeTab]}
             alt={`${activeTab} Example`}
-            className="w-96 rounded-lg shadow-xl transition-transform transform hover:scale-105"
+            className="w-72 sm:w-96 rounded-lg shadow-xl transition-transform transform hover:scale-105"
           />
         </div>
       </motion.div>

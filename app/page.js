@@ -2,38 +2,11 @@ import Image from "next/image";
 import Header from "./(common)/components/header";
 import Footer from "./(common)/components/footer";
 import Tabs from "./(common)/components/tabs";
-// import SwiperSlider from "./(common)/components/slick";
+import SwiperSlider from "./(common)/components/slick";
 // import Slider from "react-slick";
 
 export default function Home() {
-  const CustomPrevArrow = (props) => (
-    <button
-      {...props}
-      className="absolute left-0 z-10 bg-gray-800 text-white p-2 rounded-full"
-    >
-      {/* <FaChevronLeft /> */}
-    </button>
-  );
-
-  const CustomNextArrow = (props) => (
-    <button
-      {...props}
-      className="absolute right-0 z-10 bg-gray-800 text-white p-2 rounded-full"
-    >
-      {/* <FaChevronRight /> */}
-    </button>
-  );
-
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    prevArrow: <CustomPrevArrow />,
-    nextArrow: <CustomNextArrow />,
-  };
-
+  
   return (
     <>
       <Header />
@@ -54,7 +27,7 @@ export default function Home() {
                 placeholder="Your Work Email"
                 className="px-4 py-3 w-64 text-black rounded-md bg-white"
               />
-              <button className="bg-red-600 text-white px-6 py-3 rounded-md">
+              <button className="bg-red-600 text-white px-6 py-3 rounded-md animate-pulse">
                 GET STARTED NOW!
               </button>
             </div>
@@ -75,7 +48,6 @@ export default function Home() {
         style={{ backgroundColor: "oklch(0.22 0.03 270.85)" }}
       >
         <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left  border-gray-700 pt-6">
-          {/* IDC */}
           <div className="flex flex-col items-center md:items-start">
             <img src="/logos/idc.webp" alt="IDC" className="h-10 mb-2" />
             <p className="text-gray-300 text-sm">
@@ -84,7 +56,6 @@ export default function Home() {
             </p>
           </div>
 
-          {/* Gartner */}
           <div className="flex flex-col items-center md:items-start border-l border-gray-700 pl-6">
             <img
               src="/logos/gartner.webp"
@@ -97,7 +68,6 @@ export default function Home() {
             </p>
           </div>
 
-          {/* Forrester */}
           <div className="flex flex-col items-center md:items-start border-l border-gray-700 pl-6">
             <img
               src="/logos/forrester.webp"
@@ -115,16 +85,13 @@ export default function Home() {
       <Tabs />
 
       <section className=" px-6 py-12 bg-white text-black">
-        {/* Heading */}
         <h2 className="text-2xl md:text-3xl font-bold text-center mb-8">
           <span className=" text-black px-3 py-1 rounded-lg">
             What additional possibilities does the Kiosk mode offer?
           </span>
         </h2>
 
-        {/* Content Section */}
         <div className="flex flex-col md:flex-row items-center gap-8">
-          {/* Image */}
           <div className="w-50 md:w-1/3">
             <img
               src="/effortless-kiosk-deployement-image.webp"
@@ -133,7 +100,6 @@ export default function Home() {
             />
           </div>
 
-          {/* Text Content */}
           <div className="w-full md:w-1/2 space-y-6">
             <div>
               <h3 className="font-bold text-lg">
@@ -187,19 +153,16 @@ export default function Home() {
           </div>
         </Slider>
       </div> */}
-
       {/* <SimpleSlider /> */}
-      {/* <SwiperSlider /> */}
+      <SwiperSlider />
       
 
       <div>
-        {/* Platforms Supported */}
         <section className="text-center py-12 bg-white">
           <h2 className="text-2xl font-semibold text-gray-900">
             Platforms supported
           </h2>
           <div className="flex justify-center items-center gap-6 mt-6 flex-wrap">
-            {/* Platform Icons */}
             {[
               { name: "Android", img: "/logos/android.svg" },
               { name: "Windows", img: "/logos/windows.svg" },
@@ -215,7 +178,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Sign-up Section */}
         <section className="bg-gray-900 text-white text-center py-10">
           <h2 className="text-2xl font-semibold">
             Sign up and try Hexnode free for 14 days!
@@ -226,7 +188,7 @@ export default function Home() {
               placeholder="Your Work Email"
               className="px-4 py-2 rounded-md text-gray-800 w-64 bg-white"
             />
-            <button className="bg-red-500 hover:bg-red-600 text-white px-6 py-2 rounded-md font-semibold">
+            <button className="animate-pulse bg-red-500 hover:bg-red-600 text-white px-6 py-2 rounded-md font-semibold">
               GET STARTED
             </button>
           </div>

@@ -19,23 +19,22 @@ const Header = () => {
   return (
     <div
       className={`sticky top-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-white shadow-md" : "bg-transparent"
+        isScrolled ? "bg-white shadow-md" : "bg-black"
       }`}
     >
       {/* Navbar */}
       <nav className="flex items-center justify-between p-4">
-        {/* <h1 className={`text-2xl font-bold ${isScrolled ? "text-black" : "text-white"}`}>hexnode</h1> */}
         <Image
-          src="/logos/brand.png" // Replace with the actual path to your icon image
+          src="/logos/brand.png"
           alt="Logo"
-          width={300} // Adjust size as needed
-          height={300} // Adjust size as needed
+          width={300}
+          height={300}
           className={`${
             isScrolled ? "filter grayscale-0" : "filter brightness-0 invert"
           }`}
         />
         <button
-          className="bg-red-600 text-white px-4 py-2 rounded-md"
+          className="animate-pulse bg-red-600 text-white px-4 py-2 rounded-md transition-all duration-300 transform hover:scale-105 hover:bg-red-700 hover:shadow-lg active:scale-95"
           onClick={() => router.push("/mobile-device-management/cloud/signup/")}
         >
           14 DAY FREE TRIAL
