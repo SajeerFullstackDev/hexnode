@@ -47,7 +47,7 @@ export default function SwiperSlider() {
   return (
     <div className="w-full flex flex-col items-center justify-center p-5">
       {/* Testimonials Swiper */}
-      <div className="w-full max-w-3xl mx-auto bg-white relative mb-10">
+      <div className="w-full max-w-3xl mx-auto bg-white text-black relative mb-10">
         <Swiper
           modules={[Pagination, Autoplay]}
           spaceBetween={70}
@@ -58,7 +58,10 @@ export default function SwiperSlider() {
           className="rounded-lg shadow-lg"
         >
           {testimonials.map((testimonial, index) => (
-            <SwiperSlide key={index} className="flex items-center justify-center h-64">
+            <SwiperSlide
+              key={index}
+              className="flex items-center justify-center h-64"
+            >
               <div className="flex flex-col md:flex-row overflow-hidden rounded-lg bg-white p-5 shadow-md">
                 <img
                   alt={testimonial.name}
@@ -67,8 +70,12 @@ export default function SwiperSlider() {
                 />
                 <div className="ml-5">
                   <h4 className="text-xl font-bold">"{testimonial.quote}"</h4>
-                  <p className="text-sm font-semibold mt-2">{testimonial.name}</p>
-                  <small className="text-gray-600">{testimonial.role}, {testimonial.company}</small>
+                  <p className="text-sm font-semibold mt-2">
+                    {testimonial.name}
+                  </p>
+                  <small className="text-gray-600">
+                    {testimonial.role}, {testimonial.company}
+                  </small>
                 </div>
               </div>
             </SwiperSlide>
@@ -93,7 +100,12 @@ export default function SwiperSlider() {
         >
           {brands.map((brand, index) => (
             <SwiperSlide key={index} className="flex justify-center">
-              <img src={brand} alt={`Brand ${index + 1}`} className="w-32 h-20 object-contain" /> {/* Increased size */}
+              <img
+                src={brand}
+                alt={`Brand ${index + 1}`}
+                className="w-32 h-20 object-contain"
+              />{" "}
+              {/* Increased size */}
             </SwiperSlide>
           ))}
         </Swiper>
