@@ -3,6 +3,8 @@ import Footer from "./(common)/components/footer";
 import Tabs from "./(common)/components/tabs";
 import SwiperSlider from "./(common)/components/slick";
 import FloatingButton from "./(common)/components/floatbtn";
+import KioskFeatures from "./(common)/components/features";
+import Form from "./(common)/components/form";
 
 export default function Home() {
   return (
@@ -15,16 +17,7 @@ export default function Home() {
             <h2 className="text-4xl lg:text-5xl font-bold">
               Turn your devices into kiosks in a few minutes with Hexnode UEM
             </h2>
-            <div className="flex gap-2">
-              <input
-                type="email"
-                placeholder="Your Work Email"
-                className="px-4 py-3 w-64 text-black rounded-md bg-white"
-              />
-              <button className="bg-red-600 text-white px-3 py-3 rounded-md animate-pulse">
-                GET STARTED NOW!
-              </button>
-            </div>
+          <Form/>
           </div>
 
           <div className="lg:w-1/2 flex justify-center mt-10 lg:mt-0">
@@ -39,6 +32,9 @@ export default function Home() {
 
       <Tabs />
 
+
+<KioskFeatures/>
+
       <div>
         <h2 className="text-4xl font-semibold text-black text-center p-8">
           Sign up and try Hexnode free for 14 days!
@@ -51,6 +47,8 @@ export default function Home() {
           Sign up and try Hexnode free for 14 days!
         </h2>
         <div className="mt-6 flex flex-col sm:flex-row justify-center gap-3">
+        {/* <Form/> */}
+
           <input
             type="email"
             placeholder="Your Work Email"
@@ -60,6 +58,7 @@ export default function Home() {
             GET STARTED
           </button>
         </div>
+
         <p className="text-gray-400 text-sm mt-2">
           No credit cards required.{" "}
           <span className="text-red-400 cursor-pointer">Request a demo</span>
