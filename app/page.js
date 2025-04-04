@@ -30,10 +30,6 @@ export default function Home() {
         </div>
       </div>
 
-
-
-
-
       <div
         className="text-white py-8"
         style={{ backgroundColor: "oklch(0.22 0.03 270.85)" }}
@@ -48,7 +44,6 @@ export default function Home() {
           </div>
 
           <div className="flex flex-col items-center md:items-start sm:border-none md:border-l border-gray-700 pl-6">
-
             <img
               src="/logos/gartner.webp"
               alt="Gartner"
@@ -61,7 +56,6 @@ export default function Home() {
           </div>
 
           <div className="flex flex-col items-center md:items-start sm:border-none md:border-l border-gray-700 pl-6">
-
             <img
               src="/logos/forrester.webp"
               alt="Forrester"
@@ -74,7 +68,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-
 
       <Tabs />
 

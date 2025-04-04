@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 import Link from "next/link";
@@ -22,19 +22,19 @@ export default function SignupPage() {
 
   return (
     <>
-     
       <div className="sticky top-0 z-50 bg-white shadow-md">
         <nav className="flex items-center justify-between p-4">
-
-<h1 className="text-2xl font-bold text-black">
-  <Link href="/">  <Image
-            src="/logos/brand.png" // Replace with the actual path to your icon image
-            alt="Logo"
-            width={300} // Adjust size as needed
-            height={300} // Adjust size as needed</Link>
-            />
+          <h1 className="text-2xl font-bold text-black">
+            <Link href="/">
+              {" "}
+              <Image
+                src="/logos/brand.png" // Replace with the actual path to your icon image
+                alt="Logo"
+                width={300} // Adjust size as needed
+                height={300} // Adjust size as needed</Link>
+              />
             </Link>
-</h1>
+          </h1>
 
           <div className="relative">
             <button

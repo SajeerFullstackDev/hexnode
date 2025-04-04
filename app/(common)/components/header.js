@@ -63,7 +63,9 @@ const Header = () => {
 
         {/* Mobile Menu Button */}
         <button
-          className={`md:hidden text-black transition-transform duration-300 ${isMenuOpen ? "rotate-90" : "rotate-0"}`}
+          className={`md:hidden text-black transition-transform duration-300 ${
+            isMenuOpen ? "rotate-90" : "rotate-0"
+          }`}
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           style={{ color: "red" }}
         >
@@ -76,7 +78,7 @@ const Header = () => {
         <div className="fixed inset-0 bg-white flex flex-col items-center justify-center text-black py-4 space-y-6 z-40 animate-fade-in">
           {/* Close Button */}
           <button
-            className="absolute top-4 right-4 text-red-600 transition-transform duration-300 hover:rotate-90" 
+            className="absolute top-4 right-4 text-red-600 transition-transform duration-300 hover:rotate-90"
             onClick={() => setIsMenuOpen(false)}
           >
             <X size={32} />
