@@ -17,7 +17,7 @@ export default function Home() {
             <h2 className="text-4xl lg:text-5xl font-bold">
               Turn your devices into kiosks in a few minutes with Hexnode UEM
             </h2>
-          <Form/>
+            <Form />
           </div>
 
           <div className="lg:w-1/2 flex justify-center mt-10 lg:mt-0">
@@ -32,8 +32,7 @@ export default function Home() {
 
       <Tabs />
 
-
-<KioskFeatures/>
+      <KioskFeatures />
 
       <div>
         <h2 className="text-4xl font-semibold text-black text-center p-8">
@@ -42,12 +41,47 @@ export default function Home() {
         <SwiperSlider />
       </div>
 
+
+
+
+      
+      <section className="text-center py-16 bg-white">
+  <div className="container mx-auto px-4">
+    <h2 className="text-3xl font-semibold text-gray-900 mb-10">
+      Platforms supported
+    </h2>
+    <div className="flex justify-center items-center gap-8 mt-8 flex-wrap">
+      {[
+        { name: "Android", img: "/logos/android.svg" },
+        { name: "Windows", img: "/logos/windows.svg" },
+        { name: "iOS", img: "/logos/ios.svg" },
+        { name: "Android TV", img: "/logos/android-tv.svg" },
+        { name: "Apple TV", img: "/logos/apple-tv.svg" },
+        { name: "Fire", img: "/logos/fire.webp" },
+      ].map((platform, index) => (
+        <div 
+          key={index} 
+          className="border p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
+        >
+          <img 
+            src={platform.img} 
+            alt={platform.name} 
+            className="h-12 w-auto" 
+            loading="lazy"
+          />
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+
       <section className="bg-gray-900 text-white text-center py-10">
         <h2 className="text-2xl font-semibold">
           Sign up and try Hexnode free for 14 days!
         </h2>
         <div className="mt-6 flex flex-col sm:flex-row justify-center gap-3">
-        {/* <Form/> */}
+          {/* <Form/> */}
 
           <input
             type="email"
